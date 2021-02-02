@@ -15,7 +15,7 @@ public class Case3 {
             System.out.println("Points Yx Equalise");
         }if (   pointX1==pointX2 && pointX2 ==pointX3 && pointX1 == pointX3 &&
                 pointY1==pointY2 && pointY2 ==pointY3 && pointY1 == pointY3 ){
-            System.out.println("Used ONE BLEAT POINT ");
+            System.out.println("Used ONE POINT for everything");
         }
     }
 }
