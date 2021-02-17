@@ -2,56 +2,53 @@ package Programming_with_class.Composing;
 
 class Word {
     String value;
-    public Word() {}
 
-    public Word(String value) {
+    Word() {}
+
+    Word(String value) {
         this.value = value;
     }
 
-    public String getValue() {
+    String getValue() {
         return value;
     }
 }
 
-class Phrase extends Word{
-    String value="";
-    public Phrase() {
+class Phrase extends Word {
+    Phrase() {
         super();
     }
 
-    public void addValue(Word word) {
+    void addValue(Word word) {
         value += " " + word.getValue();
     }
 
-    public String getValue() {
+    String getValue() {
         return value;
     }
 }
 
-public class Text {
+class Text {
     String header;
     private String body = "";
 
-    public Text(Word word) {
+    Text(Word word) {
         header = word.getValue();
     }
 
-    public String getHeader() {
+    String getHeader() {
         return header;
     }
 
-    public void addBody(Word word) {
+    void addBody(Word word) {
         body += " " + word.getValue();
     }
 
-    public void addBody(Phrase phrase) {
-        body += " " + phrase.getValue();
-    }
-
-    public String getBody() {
+    String getBody() {
         return body;
     }
 }
+
 class TextRunner {
     public static void main(String[] args) {
         Word word = new Word("quote");
@@ -68,8 +65,8 @@ class TextRunner {
 
         text.addBody(phrase);
 
-        System.out.println("Head: "+text.getHeader());
-        System.out.println("Body: "+text.getBody());
+        System.out.println("Head: " + text.getHeader());
+        System.out.println("Body: " + text.getBody());
 
     }
 }
